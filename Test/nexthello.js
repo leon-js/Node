@@ -1,17 +1,16 @@
 'use strict'
 
-var greet = require('./hello');
+// var greet = require('./hello');
 
-process.on('exit', function (code) {
+process.on('exit', function (code) {  // 程序即将退出时的回调函数:
     console.log('about to exit with code: ' + code);
 });
-// 程序即将退出时的回调函数:
 
-var s = 'Michael';
+// var s = 'Michael';
 
-greet.greetting(s);
+// greet.greetting(s);
 
-process.nextTick(function () {
+process.nextTick(function () { // process.nextTick()将在下一轮事件循环中调用:
     console.log('nextTick callback!');
 });
 console.log('nextTick was set!');
