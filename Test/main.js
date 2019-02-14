@@ -6,6 +6,7 @@ console.log("计数: %d", counter);
 console.time("获取数据");
 //
 // 执行一些代码
+console.log(1+1)
 // 
 console.timeEnd('获取数据');
 
