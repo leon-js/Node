@@ -27,12 +27,15 @@ var server = http.createServer(function(req,res){
     // var myReadStream = fs.createReadStream(__dirname + '/index.html', 'utf-8');
     // myReadStream.pipe(res);
     if (req.url === '/home' || req.url === '/'){
+        console.log("当前路由：" + req.url);
         res.writeHead(200,{"Content-type":"text/html"});
         fs.createReadStream(__dirname + '/index.html', "utf-8").pipe(res);
     }else if(req.url === '/contact'){
+        console.log("当前路由：" + req.url);
         res.writeHead(200,{"Content-type":"text/html"});
         fs.createReadStream(__dirname + '/contact.html', "utf-8").pipe(res);
     }else if(req.url === '/api/docs'){
+        console.log("当前路由：" + req.url);
         res.writeHead(200,{"Content-type":"text/html"});
         fs.createReadStream(__dirname + '/api/docs.html', "utf-8").pipe(res);
     }
